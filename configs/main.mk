@@ -21,6 +21,10 @@ ifneq ($(EUCOS_BUILD_TYPE),UNOFFICIAL)
     PRODUCT_DEFAULT_DEV_CERTIFICATE := ../.keys/releasekey
 endif
 
+# World APN list
+PRODUCT_COPY_FILES += \
+    vendor/euco/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
+
 # Main Required Packages
 PRODUCT_PACKAGES += \
     LiveWallpapersPicker
