@@ -34,3 +34,6 @@ PRODUCT_PACKAGES += \
 
 # call sdclang makefile
 include vendor/eucos/configs/sdclang.mk
+
+# Squisher Location
+SQUISHER_SCRIPT := vendor/eucos/tools/squisher
