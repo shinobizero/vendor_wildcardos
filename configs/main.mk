@@ -16,6 +16,11 @@
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/eucos/overlay/common
 
+# Use signing keys for only official nightly builds
+ifeq ($(EUCOS_BUILD_TYPE),NIGHTLY)
+    PRODUCT_DEFAULT_DEV_CERTIFICATE := ../.keys/releasekey
+endif
+
 # Main Required Packages
 PRODUCT_PACKAGES += \
     LiveWallpapersPicker
