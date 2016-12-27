@@ -12,13 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#PureNexus versioning
-ifndef PURE_BUILD_TYPE
-    PURE_BUILD_TYPE := UNOFFICIAL
+# EuclideanOS versioning
+ifndef EUCOS_BUILD_TYPE
+    EUCOS_BUILD_TYPE := UNOFFICIAL
 endif
 
-PURE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(PURE_BUILD_TYPE)
+EUCOS_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(TARGET_PRODUCT)-$(EUCOS_BUILD_TYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.pure.version=$(PURE_VERSION)
-
+    ro.eucos.version=$(EUCOS_VERSION)
