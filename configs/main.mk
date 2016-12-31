@@ -30,7 +30,9 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     OpenDelta \
     Phonograph \
-    ThemeInterfacer
+    ThemeInterfacer \
+    audio_effects.conf \
+    libcyanogen-dsp
 
 # call sdclang makefile
 include vendor/eucos/configs/sdclang.mk
