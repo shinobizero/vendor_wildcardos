@@ -1,4 +1,4 @@
-# Copyright (C) 2017 The Pure Nexus Project
+# Copyright (C) 2016 ParanoidAndroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,23 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Include overlays
-PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/pure/overlay/common
+SDCLANG ?= true
+SDCLANG_FORCED ?= false
 
-# Main Required Packages
-PRODUCT_PACKAGES += \
-    Launcher3 \
-    LiveWallpapersPicker
+SDCLANG_PATH := vendor/qcom/sdclang-3.8/linux-x86/bin
 
-# Include explicitly to work around Facelock issues
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full
+SDCLANG_LTO_DEFS := vendor/eucos/sdclang/sdllvm-lto-defs.mk
 
-# Custom Packages
-PRODUCT_PACKAGES += \
-    Busybox \
-    Masquerade
-
-# call sdclang makefile
-include vendor/eucos/configs/sdclang.mk
+SDCLANG_COMMON_FLAGS := -O3
