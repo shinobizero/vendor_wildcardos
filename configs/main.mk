@@ -27,8 +27,8 @@ PRODUCT_PACKAGES += \
 # Custom Packages
 PRODUCT_PACKAGES += \
     Busybox \
-    Masquerade \
-    OpenDelta
+    OpenDelta \
+    ThemeInterfacer
 
 # call sdclang makefile
 include vendor/eucos/configs/sdclang.mk
