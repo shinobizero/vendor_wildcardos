@@ -15,6 +15,9 @@
 # Include telephony configuration
 include vendor/eucos/configs/phone.mk
 
+# Include gapps packages
+include vendor/gapps/arm-phone-gapps.mk
+
 # Get the long list of APNs
 PRODUCT_COPY_FILES := device/lge/hammerhead/apns-full-conf.xml:system/etc/apns-conf.xml
 
