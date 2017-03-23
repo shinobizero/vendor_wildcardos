@@ -27,7 +27,9 @@ PRODUCT_PACKAGES += \
 # Custom Packages
 PRODUCT_PACKAGES += \
     Busybox \
+    OmniJaws \
     OpenDelta \
+    Phonograph \
     ThemeInterfacer
 
 # call sdclang makefile

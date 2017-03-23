@@ -1,1 +1,1 @@
-add_lunch_combo hammerhead-userdebug
+add_lunch_combo hammerhead-user
