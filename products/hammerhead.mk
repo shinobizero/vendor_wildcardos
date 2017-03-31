@@ -42,4 +42,4 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Call hammerhead vendor
 $(call inherit-product, device/lge/hammerhead/device.mk)
-$(call inherit-product, vendor/lge/hammerhead/hammerhead-vendor.mk)
+$(call inherit-product, vendor/lge/hammerhead/device-vendor.mk)
