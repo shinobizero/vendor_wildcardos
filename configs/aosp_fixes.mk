@@ -31,6 +31,7 @@ ifneq ($(filter shamu,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES +=  \
     vendor/eucos/prebuilt/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
     vendor/eucos/prebuilt/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
+endif
 
 # Proprietary latinime libs needed for Keyboard swyping
 ifneq ($(filter hammerhead shamu,$(TARGET_PRODUCT)),)
