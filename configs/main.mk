@@ -34,6 +34,7 @@ PRODUCT_PACKAGES += \
     Busybox \
     OmniJaws \
     OpenDelta \
+    PABrowser \
     Phonograph \
     ThemeInterfacer \
     audio_effects.conf \
