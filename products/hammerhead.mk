@@ -35,11 +35,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=google/hammerhead/hammerhead:6.0.1/M4B30Z/3437181:user/release-keys \
     PRIVATE_BUILD_DESC="hammerhead-user 6.0.1 M4B30Z 3437181 release-keys"
 
-# Enable HAL1 hacks
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    media.stagefright.legacyencoder=true \
-    media.stagefright.less-secure=true
-
 # Call hammerhead vendor
-$(call inherit-product, device/lge/hammerhead/device.mk)
-$(call inherit-product, vendor/lge/hammerhead/device-vendor.mk)
+$(call inherit-product, device/lge/hammerhead/hammerhead.mk)
+$(call inherit-product, vendor/lge/hammerhead/hammerhead-vendor.mk)
