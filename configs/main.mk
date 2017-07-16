@@ -32,6 +32,7 @@ PRODUCT_PACKAGES += \
 # Custom Packages
 PRODUCT_PACKAGES += \
     Busybox \
+    Lawnchair \
     OmniJaws \
     OpenDelta \
     PABrowser \
