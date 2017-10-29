@@ -35,7 +35,6 @@ PRODUCT_PACKAGES += \
     Lawnchair \
     OmniJaws \
     OpenDelta \
-    PABrowser \
     Phonograph \
     ThemeInterfacer \
     audio_effects.conf \
