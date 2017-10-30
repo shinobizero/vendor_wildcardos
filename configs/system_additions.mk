@@ -29,3 +29,9 @@ PRODUCT_COPY_FILES += \
 # Security Enhanced Linux
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
+
+# Enable Google Lens
+PRODUCT_COPY_FILES += \
+    vendor/eucos/prebuilt/etc/sysconfig/nexus.xml:system/etc/sysconfig/nexus.xml \
+    vendor/eucos/prebuilt/etc/sysconfig/pixel_2017_exclusive.xml:system/etc/sysconfig/pixel_2017_exclusive.xml \
+    vendor/eucos/prebuilt/etc/sysconfig/pixel_2017.xml:system/etc/sysconfig/pixel_2017.xml
