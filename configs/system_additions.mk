@@ -35,3 +35,8 @@ PRODUCT_COPY_FILES += \
     vendor/eucos/prebuilt/etc/sysconfig/nexus.xml:system/etc/sysconfig/nexus.xml \
     vendor/eucos/prebuilt/etc/sysconfig/pixel_2017_exclusive.xml:system/etc/sysconfig/pixel_2017_exclusive.xml \
     vendor/eucos/prebuilt/etc/sysconfig/pixel_2017.xml:system/etc/sysconfig/pixel_2017.xml
+
+# Spectrum Support
+PRODUCT_PROPERTY_OVERRIDES += \
+    spectrum.support=1 \
+    persist.spectrum.kernel=EuclideanOS
