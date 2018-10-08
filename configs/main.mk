@@ -31,17 +31,20 @@ PRODUCT_PACKAGES += \
 
 # Custom Packages
 PRODUCT_PACKAGES += \
+    Amaze \
     Busybox \
+    Camera2 \
+    Eleven \
+    Fdroid \
+    F-DroidPrivilegedExtension \
+    FirefoxFocus \
     Lawnchair \
     OmniJaws \
     OpenDelta \
-    Phonograph \
+    Substratum \
     ThemeInterfacer \
     audio_effects.conf \
     libcyanogen-dsp
 
 # call sdclang makefile
 include vendor/eucos/configs/sdclang.mk
-
-# Squisher Location
-SQUISHER_SCRIPT := vendor/eucos/tools/squisher

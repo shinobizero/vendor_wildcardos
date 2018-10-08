@@ -29,6 +29,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.dun.override=0
-
-# Pull in Prebuilt applications for phones
-$(call inherit-product-if-exists, vendor/prebuilt/prebuilt.mk)
