@@ -4,5 +4,5 @@ $(warning * SDCLANG is not supported on non-linux hosts. Disabling...)
 $(warning ****************************************************************)
 else
 # include definitions for SDCLANG
-include vendor/eucos/sdclang/sdclang.mk
+include vendor/zero/sdclang/sdclang.mk
 endif

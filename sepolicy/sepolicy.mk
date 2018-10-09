@@ -3,4 +3,4 @@
 #
 
 BOARD_SEPOLICY_DIRS += \
-    vendor/eucos/sepolicy
+    vendor/zero/sepolicy

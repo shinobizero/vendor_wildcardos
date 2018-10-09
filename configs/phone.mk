@@ -12,10 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include vendor/eucos/configs/aosp_fixes.mk
-include vendor/eucos/configs/main.mk
-include vendor/eucos/configs/system_additions.mk
-include vendor/eucos/configs/version.mk
+include vendor/zero/configs/main.mk
+include vendor/zero/configs/version.mk
 
 # Telephony packages
 PRODUCT_PACKAGES += \

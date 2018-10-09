@@ -12,12 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# EuclideanOS versioning
-ifndef EUCOS_BUILD_TYPE
-    EUCOS_BUILD_TYPE := UNOFFICIAL
+# ZeroROM versioning
+PRODUCT_BRAND ?= ZeroROM
+
+# If ZERO_BUILD_TYPE is not defined, set to EXPERIMENTAL
+ifndef ZERO_BUILD_TYPE
+    ZERO_BUILD_TYPE := EXPERIMENTAL
 endif
 
-EUCOS_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(TARGET_PRODUCT)-$(EUCOS_BUILD_TYPE)
+ZERO_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(ZERO_BUILD_TYPE)-$(ZERO_PRODUCT_DEVICE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.eucos.version=$(EUCOS_VERSION)
+    ro.zero.version=$(ZERO_VERSION)
