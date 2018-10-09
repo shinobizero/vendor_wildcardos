@@ -42,7 +42,7 @@ PRODUCT_PACKAGES += \
     Fdroid \
     F-DroidPrivilegedExtension \
     FirefoxFocus \
-    Lawnchair \
+    NexusLauncher \
     OmniJaws \
     OpenDelta \
     Substratum \
