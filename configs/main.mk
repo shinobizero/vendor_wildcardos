@@ -23,7 +23,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 # World APN list
 PRODUCT_COPY_FILES += \
-    vendor/euco/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
+    vendor/eucos/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # Main Required Packages
 PRODUCT_PACKAGES += \
