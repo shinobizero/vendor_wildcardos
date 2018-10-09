@@ -33,10 +33,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full
 
+# Extra tools in ZeroROM
+PRODUCT_PACKAGES += \
+    bash \
+    Busybox \
+    libncurses
+
 # Custom Packages
 PRODUCT_PACKAGES += \
     Amaze \
-    Busybox \
     Camera2 \
     Eleven \
     Fdroid \
