@@ -1,5 +1,5 @@
 #!/bin/bash
-# EUCOS build helper script
+# ZERO build helper script
 
 # red = errors, cyan = warnings, green = confirmations, blue = informational
 # plain for generic text, bold for titles, reset flag at each end of line
@@ -45,7 +45,7 @@ DIR_OUT=$(readlink $DIR_ROOT/out)
 [ -z "$DIR_OUT" ] && DIR_OUT="$DIR_ROOT/out"
 
 # Make sure everything looks sane so far
-if [ ! -d "$DIR_ROOT/vendor/eucos" ]; then
+if [ ! -d "$DIR_ROOT/vendor/zero" ]; then
         echo -e "${CLR_BLD_RED}error: insane root directory ($DIR_ROOT)${CLR_RST}"
         exit 1
 fi
@@ -128,7 +128,7 @@ fi
 TIME_START=$(date +%s.%N)
 
 # Friendly logging to tell the user everything is working fine is always nice
-echo -e "${CLR_BLD_GRN}Building Euclidean OS 7.1.2 for $DEVICE${CLR_RST}"
+echo -e "${CLR_BLD_GRN}Building ZeroROM 7.1.2 for $DEVICE${CLR_RST}"
 echo -e "${CLR_GRN}Start time: $(date)${CLR_RST}"
 echo -e ""
 
