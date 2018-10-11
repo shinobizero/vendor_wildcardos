@@ -33,8 +33,8 @@ LOCAL_MULTILIB := both
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE        := NexusLauncher
-LOCAL_SRC_FILES     := app/NexusLauncher.apk
+LOCAL_MODULE        := Lawnchair
+LOCAL_SRC_FILES     := app/Lawnchair.apk
 LOCAL_MODULE_TAGS   := optional
 LOCAL_MODULE_CLASS  := APPS
 LOCAL_CERTIFICATE   := PRESIGNED
