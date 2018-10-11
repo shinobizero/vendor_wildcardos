@@ -91,6 +91,10 @@ PRODUCT_COPY_FILES += \
     vendor/zero/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/zero/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh \
 
+# MAGISK
+PRODUCT_COPY_FILES += \
+    external/magisk/Magisk.zip:system/addon.d/Magisk.zip
+
 # Security Enhanced Linux
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
