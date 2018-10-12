@@ -1,11 +1,11 @@
 # Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common_full.mk)
+$(call inherit-product, vendor/zero/config/common_full.mk)
 
 # Required CM packages
 PRODUCT_PACKAGES += \
     LatinIME
 
 # Include CM LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/zero/overlay/dictionaries
 
-$(call inherit-product, vendor/cm/config/telephony.mk)
+$(call inherit-product, vendor/zero/config/telephony.mk)

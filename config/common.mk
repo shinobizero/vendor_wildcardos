@@ -13,6 +13,7 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true
 
+# Security Enhanced Linux
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
@@ -33,37 +34,35 @@ endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/cm/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/cm/prebuilt/bin/50-cm.sh:system/addon.d/50-cm.sh \
-    vendor/cm/prebuilt/bin/blacklist:system/addon.d/blacklist
+    vendor/zero/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/zero/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/zero/prebuilt/bin/50-cm.sh:system/addon.d/50-cm.sh \
+    vendor/zero/prebuilt/bin/blacklist:system/addon.d/blacklist
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
-    vendor/cm/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+    vendor/zero/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/bin/otasigcheck.sh:install/bin/otasigcheck.sh
+    vendor/zero/prebuilt/bin/otasigcheck.sh:install/bin/otasigcheck.sh
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/cm/prebuilt/bin/sysinit:system/bin/sysinit
+    vendor/zero/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/zero/prebuilt/bin/sysinit:system/bin/sysinit
 
-ifneq ($(TARGET_BUILD_VARIANT),user)
 # userinit support
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
-endif
+    vendor/zero/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
 
 # CM-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/etc/init.local.rc:root/init.cm.rc
+    vendor/zero/prebuilt/etc/init.local.rc:root/init.cm.rc
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/lib/content-types.properties:system/lib/content-types.properties
+    vendor/zero/prebuilt/lib/content-types.properties:system/lib/content-types.properties
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -75,19 +74,19 @@ PRODUCT_COPY_FILES += \
 
 # This is CM!
 PRODUCT_COPY_FILES += \
-    vendor/cm/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
+    vendor/zero/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
 # Include CM audio files
-include vendor/cm/config/cm_audio.mk
+include vendor/zero/config/cm_audio.mk
 
 ifneq ($(TARGET_DISABLE_CMSDK), true)
 # CMSDK
-include vendor/cm/config/cmsdk_common.mk
+include vendor/zero/config/cmsdk_common.mk
 endif
 
 # TWRP
 ifeq ($(WITH_TWRP),true)
-include vendor/cm/config/twrp.mk
+include vendor/zero/config/twrp.mk
 endif
 
 # Required CM packages
@@ -217,7 +216,7 @@ PRODUCT_PACKAGES += \
     procrank
 endif
 
-DEVICE_PACKAGE_OVERLAYS += vendor/cm/overlay/common
+DEVICE_PACKAGE_OVERLAYS += vendor/zero/overlay/common
 
 PRODUCT_VERSION_MAJOR = 14
 PRODUCT_VERSION_MINOR = 1
@@ -315,7 +314,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.cmlegal.url=https://lineageos.org/legal
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
-    vendor/cm/build/target/product/security/lineage
+    build/target/product/security/lineage
 
 -include vendor/cm-priv/keys/keys.mk
 
@@ -348,7 +347,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.cm.display.version=$(CM_DISPLAY_VERSION)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
--include vendor/cm/config/partner_gms.mk
+-include vendor/zero/config/partner_gms.mk
 -include vendor/cyngn/product.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
