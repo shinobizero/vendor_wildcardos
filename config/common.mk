@@ -33,10 +33,10 @@ endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/cm/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/cm/prebuilt/common/bin/50-cm.sh:system/addon.d/50-cm.sh \
-    vendor/cm/prebuilt/common/bin/blacklist:system/addon.d/blacklist
+    vendor/cm/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/cm/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/cm/prebuilt/bin/50-cm.sh:system/addon.d/50-cm.sh \
+    vendor/cm/prebuilt/bin/blacklist:system/addon.d/blacklist
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
@@ -44,26 +44,26 @@ PRODUCT_COPY_FILES += \
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
+    vendor/cm/prebuilt/bin/otasigcheck.sh:install/bin/otasigcheck.sh
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/cm/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/cm/prebuilt/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/cm/prebuilt/bin/sysinit:system/bin/sysinit
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
 # userinit support
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/cm/prebuilt/etc/init.d/90userinit:system/etc/init.d/90userinit
 endif
 
 # CM-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/init.local.rc:root/init.cm.rc
+    vendor/cm/prebuilt/etc/init.local.rc:root/init.cm.rc
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
+    vendor/cm/prebuilt/lib/content-types.properties:system/lib/content-types.properties
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
