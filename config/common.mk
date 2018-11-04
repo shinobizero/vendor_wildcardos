@@ -22,15 +22,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Argon.ogg \
     ro.config.alarm_alert=Hassium.ogg
 
-ifneq ($(TARGET_BUILD_VARIANT),user)
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
-endif
 
-ifneq ($(TARGET_BUILD_VARIANT),eng)
 # Enable ADB authentication
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
-endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
@@ -102,8 +98,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libemoji \
     LiveWallpapersPicker \
-    PhotoTable \
-    Terminal
+    PhotoTable
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
@@ -112,15 +107,8 @@ PRODUCT_PACKAGES += \
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
-    AudioFX \
     CMSettingsProvider \
-    LineageSetupWizard \
-    Eleven \
-    ExactCalculator \
-    Jelly \
     LockClock \
-    Trebuchet \
-    Updater \
     WallpaperPicker \
     WeatherProvider
 
@@ -154,6 +142,27 @@ PRODUCT_PACKAGES += \
     vim \
     wget \
     zip
+
+# ZeroROM Common App Packages
+PRODUCT_PACKAGES += \
+    AudioFX \
+    Busybox \
+    Calendar \
+    Camera2 \
+    CMParts \
+    DeskClock \
+    Eleven \
+    ExactCalculator \
+    Gallery2 \
+    ThemeInterfacer
+
+# ZeroROM Common Packages
+PRODUCT_COPY_FILES += \
+    vendor/zero/prebuilt/xbin/hid-keyboard:system/xbin/hid-keyboard
+
+# MAGISK
+PRODUCT_COPY_FILES += \
+    external/magisk/Magisk.zip:system/addon.d/Magisk.zip
 
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
@@ -201,13 +210,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Storage manager
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.storage_manager.enabled=true
-
-# Telephony
-PRODUCT_PACKAGES += \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
 
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
