@@ -145,6 +145,7 @@ PRODUCT_PACKAGES += \
 
 # ZeroROM Common App Packages
 PRODUCT_PACKAGES += \
+    Amaze \
     AudioFX \
     Busybox \
     Calendar \
@@ -153,7 +154,9 @@ PRODUCT_PACKAGES += \
     DeskClock \
     Eleven \
     ExactCalculator \
+    FirefoxFocus \
     Gallery2 \
+    Lawnchair \
     ThemeInterfacer
 
 # ZeroROM Common Packages
