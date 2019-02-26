@@ -119,8 +119,8 @@ PRODUCT_PACKAGES += \
     Eleven \
     ExactCalculator \
     Jelly \
+    Lawnchair \
     LockClock \
-    Trebuchet \
     Updater \
     WallpaperPicker \
     WeatherProvider
