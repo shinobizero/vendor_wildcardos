@@ -90,10 +90,6 @@ ifeq ($(WITH_TWRP),true)
 include vendor/cm/config/twrp.mk
 endif
 
-# Bootanimation
-PRODUCT_PACKAGES += \
-    bootanimation.zip
-
 # Required CM packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
