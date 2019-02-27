@@ -94,7 +94,6 @@ endif
 PRODUCT_PACKAGES += \
     BluetoothExt \
     CMAudioService \
-    CMParts \
     Development \
     Profiles \
     WeatherManagerService
@@ -103,8 +102,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libemoji \
     LiveWallpapersPicker \
-    PhotoTable \
-    Terminal
+    PhotoTable
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
@@ -113,15 +111,8 @@ PRODUCT_PACKAGES += \
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
-    AudioFX \
     CMSettingsProvider \
-    LineageSetupWizard \
-    Eleven \
-    ExactCalculator \
-    Jelly \
-    Lawnchair \
     LockClock \
-    Updater \
     WallpaperPicker \
     WeatherProvider
 
@@ -155,6 +146,26 @@ PRODUCT_PACKAGES += \
     vim \
     wget \
     zip
+
+# ZeroROM Common App Packages
+PRODUCT_PACKAGES += \
+    AudioFX \
+    Calendar \
+    Camera2 \
+    CMParts \
+    DeskClock \
+    Eleven \
+    ExactCalculator \
+    Gallery2 \
+    Lawnchair
+
+# ZeroROM Common Packages
+PRODUCT_COPY_FILES += \
+    vendor/zero/prebuilt/xbin/hid-keyboard:system/xbin/hid-keyboard
+
+# MAGISK
+PRODUCT_COPY_FILES += \
+    external/magisk/Magisk.zip:system/addon.d/Magisk.zip
 
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
