@@ -228,7 +228,7 @@ endif
 DEVICE_PACKAGE_OVERLAYS += vendor/zero/overlay/common
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
-    vendor/zero/build/target/product/security/lineage
+    build/target/product/security/lineage
 
 -include vendor/cm-priv/keys/keys.mk
 
