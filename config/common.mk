@@ -157,14 +157,6 @@ PRODUCT_PACKAGES += \
     Gallery2 \
     Lawnchair
 
-# ZeroROM Common Packages
-PRODUCT_COPY_FILES += \
-    vendor/zero/prebuilt/xbin/hid-keyboard:system/xbin/hid-keyboard
-
-# MAGISK
-PRODUCT_COPY_FILES += \
-    external/magisk/Magisk.zip:system/addon.d/Magisk.zip
-
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
 PRODUCT_PACKAGES += \
