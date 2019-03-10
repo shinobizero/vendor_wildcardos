@@ -146,6 +146,7 @@ PRODUCT_PACKAGES += \
 
 # ZeroROM Common App Packages
 PRODUCT_PACKAGES += \
+    Amaze \
     AudioFX \
     Busybox \
     Calendar \
