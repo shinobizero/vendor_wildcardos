@@ -3,7 +3,7 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE        := Amaze
-LOCAL_SRC_FILES     := app/AmazeFileManager.apk
+LOCAL_SRC_FILES     := app/Amaze.apk
 LOCAL_MODULE_TAGS   := optional
 LOCAL_MODULE_CLASS  := APPS
 LOCAL_CERTIFICATE   := PRESIGNED
